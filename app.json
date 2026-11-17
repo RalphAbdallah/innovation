@@ -1,13 +1,14 @@
 {
   "expo": {
-    "name": "app",
-    "slug": "app",
+    "name": "WenAna",
+    "slug": "wenana",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "backgroundColor": "#232C69",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false
     },
     "android": {
       "adaptiveIcon": {
@@ -20,6 +21,22 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "WenAna uses the camera to draw the route on the floor in front of you. Nothing is recorded or sent.",
+          "recordAudioAndroid": false,
+          "barcodeScannerEnabled": false
+        }
+      ],
+      [
+        "expo-sensors",
+        {
+          "motionPermission": "WenAna uses motion sensors to know when you raise your phone and to follow your steps."
+        }
+      ]
+    ]
   }
 }
